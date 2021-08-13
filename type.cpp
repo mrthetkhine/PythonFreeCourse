@@ -4,6 +4,7 @@ using namespace std;
 int main()
 {
    int a = 10;
-   cout<<"Hello World"<<endl;
+   //a = "Hello";
    cout<<"Address of a"<< & a<<endl;
+   cout<<"Value of a "<< a<<endl;
 }
