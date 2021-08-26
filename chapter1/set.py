@@ -9,3 +9,6 @@ print("my set ",my_set)
 
 my_set.remove(11)
 print("my set ",my_set)
+
+lst = [1,2,100,100]
+print("list ",lst)
