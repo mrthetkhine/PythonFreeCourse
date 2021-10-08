@@ -13,7 +13,19 @@ class Doctor(Human):
         super().__init__(name,age)
         self.medical_field = medical_field
         print("Doctor consturctor ")
+    
+    def work(self):
+        super().work();
+        print("Doctor treat patient")
 
-drTinShwe = Doctor("Tin Shwe",40,"Heart")
-drTinShwe.work()
-drTinShwe.eat()
+class Robot:
+    def __init__(self):
+        pass
+    def work(self):
+        print("Robot works") 
+
+d = Doctor("Tin Shwe",40,"Heart")
+d.work()
+#d.eat()
+d = Robot()
+d.work()
