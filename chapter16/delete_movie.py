@@ -8,15 +8,11 @@ try:
         database="python_free_course",
     ) as connection:
         #print(connection)
-        sql = """SELECT * FROM actor_in_movie,movie,actor
-                WHERE actor_in_movie.movie_id = movie.id
-                AND actor_in_movie.actor_id = actor.id
-                ORDER By movie.id;"""
+        id = input("Enter movie Id to delete ")
+        sql = "DELETE FROM movie WHERE id="+id;
         print(sql)
         with connection.cursor() as cursor:
             cursor.execute(sql)
-            for movie in cursor.fetchmany(size=3):
-            #for movie in cursor.fetchall():
-                print("Name ",movie)
+            connection.commit()
 except Error as e:
     print(e)
